@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="selection">
+    <input
+      type="number"
+      min="1"
+      required
+      class="input"
+      (input)="convertFirst()"
+      [(ngModel)]="amount1"
+    />
+    <select
+      #c1
+      name="select1"
+      id="curency1"
+      required
+      [(ngModel)]="selectValue1"
+      (change)="convertFirst()"
+    >
+      <option value="UAH">UAH</option>
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+    </select>
+
+    <p>to</p>
+
+    <input
+      type="number"
+      min="1"
+      required
+      class="input"
+      [(ngModel)]="amount2"
+      (input)="convertSecond()"
+    />
+    <select
+      name="select2"
+      id="curency2"
+      required
+      [(ngModel)]="selectValue2"
+      (change)="convertFirst()"
+    >
+      <option value="USD">USD</option>
+      <option value="EUR">EUR</option>
+      <option value="UAH">UAH</option>
+    </select>
+  </div>
+</div>
